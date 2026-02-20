@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zandtech Services · Contactos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container logo-area">
+        <div class="brand-left">
+            <div class="logo-icon">Z&S</div>
+            <div class="logo-text">
+                <h1>Zandtech Services</h1>
+                <div class="tagline">
+                    <i class="fas fa-cog"></i> Tecnologia · Design · Eletricidade · Climatização · Logística
+                </div>
+            </div>
+        </div>
+        <div class="logo-right">
+            <img src="img/logo.jpg" alt="Zandtech Services">
+        </div>
+    </div>
+</div>
+
+<div class="nav-menu">
+    <div class="container nav-container">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+            <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+            <li><a href="servicos.html"><i class="fas fa-cogs"></i> Serviços</a></li>
+            <li><a href="produtos.html"><i class="fas fa-boxes"></i> Produtos</a></li>
+            <li><a href="contactos.html" class="active"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-header">
+        <h2>Contactos</h2>
+        <p>Estamos aqui para atender você</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info-card">
+            <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+            <p>Tete, bairro Chingodzi<br>Moçambique</p>
+            
+            <h3><i class="fas fa-phone-alt"></i> Telefones</h3>
+            <p>+258 861065131<br>+258 847660016</p>
+            
+            <h3><i class="fas fa-envelope"></i> Email</h3>
+            <p>wiltonjosezandonda@gmail.com</p>
+            
+            <h3><i class="fas fa-clock"></i> Horário</h3>
+            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/258861065131" class="social-link whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form-card">
+            <h3>Envie uma mensagem</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="informacao">Informação</option>
+                        <option value="orcamento">Pedido de Orçamento</option>
+                        <option value="suporte">Suporte Técnico</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345!2d33.5833!3d-16.1667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDEwJzAwLjAiUyAzM8KwMzUnMDAuMCJF!5e0!3m2!1spt!2smz!4v1234567890" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 20px;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p>© 2026 Zandtech Services — Engenharia · Design · Eletricidade · Mecânica · Frio · Segurança · Logística · Limpeza · Rastreio · Domótica</p>
+        <p>Tudo em tecnologia, Serviços e Produtos | Tete, Moçambique</p>
+    </div>
+</div>
+
+<script src="js/menu.js"></script>
+</body>
+</html>

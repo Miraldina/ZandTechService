@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zandtech Services · Sobre Nós</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilos adicionais para o slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 30px 20px 15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.8);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        .slider-btn:hover {
+            background: #2563eb;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-btn.prev {
+            left: 20px;
+        }
+
+        .slider-btn.next {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background: #2563eb;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 300px;
+            }
+            
+            .slider-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="container logo-area">
+        <div class="brand-left">
+            <div class="logo-icon">Z&S</div>
+            <div class="logo-text">
+                <h1>Zandtech Services</h1>
+                <div class="tagline">
+                    <i class="fas fa-cog"></i> Tecnologia · Design · Eletricidade · Climatização · Logística
+                </div>
+            </div>
+        </div>
+        <div class="logo-right">
+            <img src="img/logo.jpg" alt="Zandtech Services">
+        </div>
+    </div>
+</div>
+
+<div class="nav-menu">
+    <div class="container nav-container">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html"><i class="fas fa-home"></i> Página Inicial</a></li>
+            <li><a href="sobre.html" class="active"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+            <li><a href="servicos.html"><i class="fas fa-cogs"></i> Serviços</a></li>
+            <li><a href="produtos.html"><i class="fas fa-boxes"></i> Produtos</a></li>
+            <li><a href="contactos.html"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-header">
+        <h2>Sobre a Zandtech Services</h2>
+        <p>Conheça nossa história, missão e valores</p>
+    </div>
+
+    <!-- Slider de Imagens -->
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slider-images" id="slider">
+                <div class="slide">
+                    <img src="img/S1.jpg" alt="Nossa Equipa">
+                    <div class="slide-caption">Equipa Zandtech Services</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S2.jpg" alt="Escritório">
+                    <div class="slide-caption">Nosso Escritório em Tete</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S3.jpg" alt="Trabalho de Equipa">
+                    <div class="slide-caption">Trabalho em Equipa</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S4.jpg" alt="Instalação Técnica">
+                    <div class="slide-caption">Instalações Técnicas</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S5.jpg" alt="Atendimento">
+                    <div class="slide-caption">Atendimento ao Cliente</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S6.jpg" alt="Atendimento">
+                    <div class="slide-caption">Atendimento ao Cliente</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S7.jpg" alt="Atendimento">
+                    <div class="slide-caption">Atendimento ao Cliente</div>
+                </div>
+                <div class="slide">
+                    <img src="img/S8.jpg" alt="Atendimento">
+                    <div class="slide-caption">Atendimento ao Cliente</div>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev" onclick="moveSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" onclick="moveSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-content">
+            <h3>Quem Somos</h3>
+            <p style="text-align: justify; line-height: 1.8; font-size: 16px;">A Zandtech Services é uma empresa moçambicana fundada na cidade de Tete, criada com o propósito de 
+            oferecer soluções completas e integradas nas áreas de tecnologia, engenharia, design e serviços gerais. Desde a sua criação, a empresa tem-se destacado pelo compromisso com a qualidade, inovação e profissionalismo, atuando tanto para clientes particulares como para empresas e instituições.
+
+            Trabalhamos com uma abordagem multidisciplinar, reunindo diferentes áreas técnicas num único espaço, o que nos permite oferecer serviços eficientes, personalizados e adaptados às necessidades específicas de cada cliente. A nossa atuação abrange desde desenvolvimento tecnológico, instalações elétricas e climatização, até segurança eletrónica, logística, manutenção técnica e comercialização de equipamentos e materiais especializados.
+
+            Na Zandtech Services, acreditamos que a excelência é construída através da dedicação, responsabilidade e atenção aos detalhes. Por isso, investimos continuamente na capacitação técnica, na atualização tecnológica e na melhoria dos nossos processos, garantindo produtos de qualidade e serviços executados com rigor e segurança.
+
+            O nosso compromisso é proporcionar confiança, eficiência e soluções inovadoras que agreguem valor real aos nossos clientes e contribuam para o desenvolvimento sustentável da nossa comunidade.</p>
+            
+            <h3>Missão</h3>
+            <p>Fornecer soluções inovadoras e de alta qualidade, superando as expectativas dos clientes e contribuindo para o desenvolvimento tecnológico de Moçambique.</p>
+            
+            <h3>Visão</h3>
+            <p>Ser referência nacional em soluções integradas, reconhecida pela excelência, inovação e compromisso com os clientes.</p>
+            
+            <h3>Valores</h3>
+            <ul class="values-list">
+                <li><i class="fas fa-check-circle"></i> Qualidade em todos os serviços</li>
+                <li><i class="fas fa-check-circle"></i> Inovação constante</li>
+                <li><i class="fas fa-check-circle"></i> Compromisso com prazos</li>
+                <li><i class="fas fa-check-circle"></i> Ética e transparência</li>
+                <li><i class="fas fa-check-circle"></i> Satisfação do cliente</li>
+            </ul>
+        </div>
+        
+        <div class="about-highlights">
+            <div class="highlight-box">
+                <i class="fas fa-calendar-alt"></i>
+                <h4>Fundação</h4>
+                <p>2016 - 10 anos de experiência</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>Sede</h4>
+                <p>Tete, bairro Chingodzi</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fas fa-briefcase"></i>
+                <h4>Áreas</h4>
+                <p>11 especialidades diferentes</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fas fa-smile"></i>
+                <h4>Clientes</h4>
+                <p>+500 satisfeitos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">Com</div>
+            <div class="stat-label">anos de Experiência</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Clientes Satisfeitos</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Profissionais</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">11</div>
+            <div class="stat-label">Áreas de Atuação</div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p>© 2026 Zandtech Services — Engenharia · Design · Eletricidade · Mecânica · Frio · Segurança · Logística · Limpeza · Rastreio · Domótica</p>
+        <p>Tudo em tecnologia, Serviços e Produtos | Tete, Moçambique</p>
+    </div>
+</div>
+
+<script>
+    // Slider JavaScript
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const slider = document.getElementById('slider');
+    const totalSlides = slides.length;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function moveSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    // Auto slide (opcional)
+    setInterval(() => {
+        moveSlide(1);
+    }, 5000); // Muda a cada 5 segundos
+
+    // Touch events para mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slider.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+            moveSlide(1); // Swipe left
+        } else if (touchEndX - touchStartX > 50) {
+            moveSlide(-1); // Swipe right
+        }
+    });
+</script>
+
+<script src="js/menu.js"></script>
+</body>
+</html>
